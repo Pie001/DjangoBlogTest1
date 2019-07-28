@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="panel">
+    <div class="panel-body">
+        <form action="{% url 'create' %}">
+            <p><h4>TITLE </h4></p>
+            <p><input type="text" name="title"></p>
+            <p><textarea name="body" id="" cols="40" rows="10"></textarea></textarea>
+            </p>
+            <input class="btn btn-default" type="submit" value="ADD POST">
+        </form>
+    </div>
+</div>
+{% endblock content %}

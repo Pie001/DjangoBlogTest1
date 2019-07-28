@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="btn-group" style="margin:5px 0 15px 0;">
+        <a href="{% url 'new' %}" class="btn btn-default">ADD POST</a>
+    </div>
+    {% for blog in blogs.all %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="blog-main">
+                    <h2 class="blog-post-title">
+                        {{blog.title}}
+                    </h2>
+                    <p class="blog-post-meta">
+                       {{blog.pub_date}}
+                    </p>
+                    <p>{{blog.summary}}<br><a href="/blog/{{blog.id}}">...more</a></p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

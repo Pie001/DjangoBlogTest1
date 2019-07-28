@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="blog-main">
+                <h2 class="blog-post-title">
+                    {{blog.title}}
+                </h2>
+                <p class="blog-post-meta">
+                   {{blog.pub_date}}
+                </p>
+                <p>{{blog.body|linebreaks}}</p>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'home'  %}" class="btn btn-default">Back</a>
+{% endblock content %}
